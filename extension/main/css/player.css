@@ -1,0 +1,72 @@
+#controls #savetify-control {
+  position: relative;
+  top: 22px;
+  left: 0px;
+}
+
+#controls #savetify-control a {
+  display: inline-block;
+  background-color: #84BD00;
+  color: #dfe0e6;
+  opacity: 1;
+  border-bottom: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 2px 15px;
+  font-size: 12px;
+}
+
+#controls #savetify-control a:hover {
+  background-color: #679600;
+}
+
+#controls #savetify-control a.disabled {
+  background-color: #2c2c2c;
+}
+
+#controls #savetify-control a.disabled:hover {
+  background-color: #474747;
+}
+
+/* PLAYER.SPOTIFY.COM */
+
+#view-profile-menu #savetify-control {
+}
+
+#view-profile-menu #savetify-control a {
+  color: white;
+  background-color: #648f00;
+  border: 1px solid #ECFFBE;
+  border-radius: 500px;
+  color: #dfe0e6;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  height: 28px;
+  letter-spacing: 1.5px;
+  line-height: 26px;
+  margin-bottom: 0;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#view-profile-menu #savetify-control a:hover {
+  background: #2e2f33;
+  color: #dfe0e6;
+  border-color: #ffffff;
+}
+
+#view-profile-menu #savetify-control a.disabled {
+  background: rgba(0, 0, 0, 0);
+  border-color: #88898C;
+}
+
+#view-profile-menu #savetify-control a.disabled:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: #ffffff;
+}

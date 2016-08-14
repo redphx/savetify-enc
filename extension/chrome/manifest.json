@@ -1,0 +1,55 @@
+{
+  "name": "$EXTENSION_NAME",
+  "description": "$EXTENSION_DESCRIPTION",
+  "author": "$EXTENSION_AUTHOR",
+  "version": "$EXTENSION_VERSION",
+  "manifest_version": 2,
+
+  "icons": {
+    "16": "img/icon_16.png",
+    "48": "img/icon_48.png",
+    "128": "img/icon_128.png"
+  },
+
+  "web_accessible_resources": [
+    "js/*",
+    "css/*"
+  ],
+
+  "background": {
+    "scripts": ["js/browser_support.js", "js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://play.spotify.com/*"],
+      "js": ["js/play/inject.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://play.spotify.com/apps/player/*"],
+      "css": ["css/player.css"],
+      "js": ["js/browser_support.js", "js/play/player_cs.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "minimum_chrome_version": "31.0",
+
+  "externally_connectable": {
+    "matches": ["*://play.spotify.com/*"]
+  },
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz5Ej3zlYCBmP3ITbqP5LiYzvZufizxipI5O1mZJd7WVhM3PVYNF8bqkQCIefwd6ORWQJfGCMZsEeLFS0s8ZRp/zCwISwKtf4fsMBwvD3b04Gd5VqfF2NyKUn4ZEni6U0ySTPrCdRlfdcptxHai9nPOb30sA4bQkE/tPCcYRayGcL34rwslrPfU2DNUQDsWJMzalHTBq7C2tF/niPg/6vAjHoR4TF/yMZUV1SV28ILVK0VxTEzy5WBzSbEBEctLQt7Xk6NTorCNei3ZqBqLqXwt92EEF2CVUJ2iWo2lF/fQ9HrSVamvee11sBa+MnuqiXybQfxdecVif4kVeGeyvtwwIDAQAB",
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "downloads",
+    "*://savetify.codekiem.com/*",
+    "*://*.cloudfront.net/*",
+    "*://*.spotify.com/*",
+    "*://play.spotify.edgekey.net/*"
+  ]
+}
