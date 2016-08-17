@@ -98,7 +98,7 @@ ZAnalytics.init();
       }, 3000);
     }
   }, {
-    urls: ['*://*.cloudfront.net/mp3enc/*']
+    urls: ['*://*.cloudfront.net/mp3enc/*', '*://audio-mp3-fa.spotify.com/mp3enc/*']
   });
   checkForUpdate();
 })();
